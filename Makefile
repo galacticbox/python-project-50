@@ -11,6 +11,6 @@ package-install:
 	python3 -m pip install --user dist/*.whl
 
 gendiff:
-	poetry run gendiff
+	poetry run gendiff /home/sovolis/python-project-50/gendiff/compare-files/file1.json /home/sovolis/python-project-50/gendiff/compare-files/file2.json
 
 .PHONY: gendiff
