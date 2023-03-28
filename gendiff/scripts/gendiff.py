@@ -3,7 +3,7 @@ import argparse
 from gendiff.gendiff import generate_diff
 
 
-def main():
+def main():  # pragma: no cover
     parser = argparse.ArgumentParser(
         prog='gendiff',
         description='Compares two configuration files and shows a difference.'
@@ -16,5 +16,5 @@ def main():
     print(generate_diff(args.first_file, args.second_file))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()
