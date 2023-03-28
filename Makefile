@@ -23,9 +23,4 @@ check:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=gendiff tests/ --cov-report xml
-
-gendiff:
-	poetry run gendiff /home/sovolis/python-project-50/tests/fixtures/file1.json /home/sovolis/python-project-50/tests/fixtures/file2.json
-
-.PHONY: gendiff
+	poetry run pytest --cov-report=xml --cov=gendiff tests/
