@@ -24,10 +24,10 @@ def generate_diff(file_path1, file_path2):
                 tmp += f'    {key2}: {transform_val(val2)}\n'
             elif key2 == key1 and val2 != val1:
                 tmp += f'  - {key1}: {transform_val(val1)}\n'
-                tmp += f'  + {key2}: {transform_val(val2)}\n'  
+                tmp += f'  + {key2}: {transform_val(val2)}\n'
             elif key1 not in file2.keys():
                 unique_key1 = f'  - {key1}: {transform_val(val1)}\n'
                 if unique_key1 not in tmp:
                     tmp += unique_key1
-    tmp += '}'            
+    tmp += '}'
     return tmp
