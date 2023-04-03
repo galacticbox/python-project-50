@@ -1,17 +1,9 @@
-import json
+from gendiff.engine import transform_val, format_decoder
 
 
-def transform_val(val):
-    bl = {'True': 'true', 'False': 'false'}
-    if isinstance(val, bool):
-        return bl[str(val)]
-    else:
-        return val
-
-
-def generate_diff(file_path1, file_path2):
-    file1 = json.load(open(file_path1))
-    file2 = json.load(open(file_path2))
+def generate_diff(filepath1, filepath2):
+    file1 = format_decoder(filepath1)
+    file2 = format_decoder(filepath2)
     tmp = '{\n'
     copy1 = sorted(file1.items())
     copy2 = sorted(file2.items())
