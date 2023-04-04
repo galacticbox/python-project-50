@@ -1,4 +1,4 @@
-from gendiff.engine import transform_val, format_decoder
+from gen_diff.engine import transform_val, format_decoder
 
 
 def generate_diff(filepath1, filepath2):

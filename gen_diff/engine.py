@@ -1,5 +1,5 @@
-from gendiff.json_dif import jsn_open
-from gendiff.yml_dif import yml_open
+from gen_diff.json_dif import jsn_open
+from gen_diff.yml_dif import yml_open
 
 
 def transform_val(val):
